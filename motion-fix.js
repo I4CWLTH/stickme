@@ -1,4 +1,12 @@
 // Stickme spatial motion layer: makes movement verbs move characters through the scene.
+if (!document.querySelector('link[data-stickme-gait]')) {
+  const gait = document.createElement('link');
+  gait.rel = 'stylesheet';
+  gait.href = 'gait-cycle.css';
+  gait.dataset.stickmeGait = 'true';
+  document.head.appendChild(gait);
+}
+
 if (typeof motionClasses !== 'undefined' && !motionClasses.includes('run')) motionClasses.push('run');
 
 const baseInferAction = inferAction;
