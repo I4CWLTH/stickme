@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: stickme
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
