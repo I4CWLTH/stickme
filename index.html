@@ -21,9 +21,9 @@
     <section class="hero">
       <div class="eyebrow">AI STICK-FIGURE MOVIE STUDIO</div>
       <h1>Your script.<br><span>Your movie.</span></h1>
-      <p>Paste a scene. Stickme turns it into characters, shots, motion, dialogue, timing and a shareable animated preview.</p>
+      <p>Paste a scene. Stickme turns it into expressive characters, camera beats, body motion, dialogue, reactions and a shareable animated preview.</p>
       <div class="hero-actions"><a class="primary" href="#studio">Create a movie</a><button id="loadDemo" class="secondary">Load demo script</button></div>
-      <div class="hero-meta"><span>⚡ Scene parsing</span><span>🎭 Auto-casting</span><span>🎬 AI Director</span><span>🔒 Paid clean exports</span></div>
+      <div class="hero-meta"><span>⚡ Scene parsing</span><span>🎭 Expressive characters</span><span>🎬 AI Director</span><span>🔒 Paid clean exports</span></div>
     </section>
 
     <section id="studio" class="studio-shell">
@@ -41,9 +41,35 @@
 
         <section class="panel preview-panel">
           <div id="previewStage" class="preview-stage ratio-169">
-            <div class="scene-bg"><div class="window"></div><div class="desk"></div></div>
-            <div class="stick person-a" aria-hidden="true"><i class="head"></i><i class="body"></i><i class="arm l"></i><i class="arm r"></i><i class="leg l"></i><i class="leg r"></i></div>
-            <div class="stick person-b" aria-hidden="true"><i class="head"></i><i class="body"></i><i class="arm l"></i><i class="arm r"></i><i class="leg l"></i><i class="leg r"></i></div>
+            <div class="scene-bg"><div class="window"></div><div class="desk"></div><div class="floor-glow"></div></div>
+
+            <div class="character person-a" data-character="a" aria-hidden="true">
+              <div class="shadow"></div>
+              <div class="figure">
+                <div class="head-wrap"><div class="hair hair-a"></div><div class="head"><span class="eye eye-l"></span><span class="eye eye-r"></span><span class="mouth"></span><span class="brow brow-l"></span><span class="brow brow-r"></span></div></div>
+                <div class="torso"><span class="shirt"></span></div>
+                <div class="limb arm arm-l"><span class="forearm"></span></div>
+                <div class="limb arm arm-r"><span class="forearm"></span></div>
+                <div class="limb leg leg-l"><span class="shin"></span></div>
+                <div class="limb leg leg-r"><span class="shin"></span></div>
+              </div>
+              <div class="name-tag">MAYA</div>
+            </div>
+
+            <div class="character person-b" data-character="b" aria-hidden="true">
+              <div class="shadow"></div>
+              <div class="figure">
+                <div class="head-wrap"><div class="hair hair-b"></div><div class="head"><span class="eye eye-l"></span><span class="eye eye-r"></span><span class="mouth"></span><span class="brow brow-l"></span><span class="brow brow-r"></span></div></div>
+                <div class="torso"><span class="shirt"></span></div>
+                <div class="limb arm arm-l"><span class="forearm"></span></div>
+                <div class="limb arm arm-r"><span class="forearm"></span></div>
+                <div class="limb leg leg-l"><span class="shin"></span></div>
+                <div class="limb leg leg-r"><span class="shin"></span></div>
+              </div>
+              <div class="name-tag">JORDAN</div>
+            </div>
+
+            <div id="actionChip" class="action-chip">IDLE</div>
             <div id="speech" class="speech">Paste a script and hit Generate Movie.</div>
             <div class="watermark">STICKME SAMPLE</div>
             <div id="sceneTitle" class="scene-title">SCENE PREVIEW</div>
@@ -53,8 +79,8 @@
 
         <aside class="panel director-panel">
           <div class="panel-label">AI DIRECTOR</div>
-          <div class="director-card"><span class="mini-label">STYLE</span><strong>Cinematic Comedy</strong><small>Reaction shots, punchy pacing, visual beats</small></div>
-          <div class="director-card"><span class="mini-label">VOICE</span><strong>Auto-cast voices</strong><small>One distinct voice per character</small></div>
+          <div class="director-card"><span class="mini-label">MOTION ENGINE</span><strong>Expressive body animation</strong><small>Walking, pointing, reacting, leaning, dancing, falling and more</small></div>
+          <div class="director-card"><span class="mini-label">CHARACTERS</span><strong>Reusable cast system</strong><small>Distinct hair, clothing, faces and expressions</small></div>
           <div class="director-card"><span class="mini-label">SOUND</span><strong>Adaptive SFX + music</strong><small>Scene-aware ambience and transitions</small></div>
           <label class="toggle-row"><span>Auto camera cuts</span><input type="checkbox" checked></label>
           <label class="toggle-row"><span>Expressions</span><input type="checkbox" checked></label>
