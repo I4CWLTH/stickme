@@ -1,4 +1,6 @@
 /* Stickme gait cycle: animate limbs inside the connected walk/run pose while the whole character travels. */
+.character.run .pose-neutral{opacity:0}
+.character.run .pose-walk{opacity:1}
 .character.walk .pose-walk,
 .character.run .pose-walk{transform-box:fill-box;transform-origin:center bottom}
 
@@ -30,9 +32,8 @@
 .character.run .pose-walk path:nth-of-type(8),
 .character.run .pose-walk path:nth-of-type(9),
 .character.run .pose-walk path:nth-of-type(10),
-.character.run .pose-walk path:nth-of-type(11),
-.character.run .pose-walk{animation-duration:.22s}
-.character.run .pose-walk{animation-name:runBounce;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}
+.character.run .pose-walk path:nth-of-type(11){animation-duration:.22s}
+.character.run .pose-walk{animation:runBounce .22s ease-in-out infinite alternate}
 
 @keyframes gaitLegA{from{transform:rotate(-16deg) translateY(0)}to{transform:rotate(18deg) translateY(2px)}}
 @keyframes gaitLegB{from{transform:rotate(18deg) translateY(2px)}to{transform:rotate(-16deg) translateY(0)}}
