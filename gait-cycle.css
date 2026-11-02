@@ -1,0 +1,42 @@
+/* Stickme gait cycle: animate limbs inside the connected walk/run pose while the whole character travels. */
+.character.walk .pose-walk,
+.character.run .pose-walk{transform-box:fill-box;transform-origin:center bottom}
+
+/* The pose-walk SVG is drawn in this path order:
+   1-2 left leg outline/fill, 3-4 right leg, 5-6 feet,
+   7 torso, 8-9 left arm, 10-11 right arm. */
+.character.walk .pose-walk path:nth-of-type(1),
+.character.walk .pose-walk path:nth-of-type(2),
+.character.run .pose-walk path:nth-of-type(1),
+.character.run .pose-walk path:nth-of-type(2){transform-box:fill-box;transform-origin:90% 0%;animation:gaitLegA .42s ease-in-out infinite alternate}
+.character.walk .pose-walk path:nth-of-type(3),
+.character.walk .pose-walk path:nth-of-type(4),
+.character.run .pose-walk path:nth-of-type(3),
+.character.run .pose-walk path:nth-of-type(4){transform-box:fill-box;transform-origin:10% 0%;animation:gaitLegB .42s ease-in-out infinite alternate}
+.character.walk .pose-walk path:nth-of-type(8),
+.character.walk .pose-walk path:nth-of-type(9),
+.character.run .pose-walk path:nth-of-type(8),
+.character.run .pose-walk path:nth-of-type(9){transform-box:fill-box;transform-origin:90% 0%;animation:gaitArmA .42s ease-in-out infinite alternate}
+.character.walk .pose-walk path:nth-of-type(10),
+.character.walk .pose-walk path:nth-of-type(11),
+.character.run .pose-walk path:nth-of-type(10),
+.character.run .pose-walk path:nth-of-type(11){transform-box:fill-box;transform-origin:10% 0%;animation:gaitArmB .42s ease-in-out infinite alternate}
+.character.walk .pose-walk{animation:gaitBounce .42s ease-in-out infinite alternate}
+
+.character.run .pose-walk path:nth-of-type(1),
+.character.run .pose-walk path:nth-of-type(2),
+.character.run .pose-walk path:nth-of-type(3),
+.character.run .pose-walk path:nth-of-type(4),
+.character.run .pose-walk path:nth-of-type(8),
+.character.run .pose-walk path:nth-of-type(9),
+.character.run .pose-walk path:nth-of-type(10),
+.character.run .pose-walk path:nth-of-type(11),
+.character.run .pose-walk{animation-duration:.22s}
+.character.run .pose-walk{animation-name:runBounce;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}
+
+@keyframes gaitLegA{from{transform:rotate(-16deg) translateY(0)}to{transform:rotate(18deg) translateY(2px)}}
+@keyframes gaitLegB{from{transform:rotate(18deg) translateY(2px)}to{transform:rotate(-16deg) translateY(0)}}
+@keyframes gaitArmA{from{transform:rotate(14deg)}to{transform:rotate(-18deg)}}
+@keyframes gaitArmB{from{transform:rotate(-18deg)}to{transform:rotate(14deg)}}
+@keyframes gaitBounce{from{transform:translateY(0) rotate(-.5deg)}to{transform:translateY(-5px) rotate(.7deg)}}
+@keyframes runBounce{from{transform:translateY(0) rotate(-2deg) scaleY(.985)}to{transform:translateY(-9px) rotate(2deg) scaleY(1.01)}}
