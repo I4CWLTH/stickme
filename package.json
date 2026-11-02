@@ -1,12 +1,13 @@
 {
   "name": "stickme",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "AI-powered stick-figure movie creator",
+  "description": "Production AI stick-figure movie studio",
   "scripts": {
-    "start": "serve -s . -l $PORT"
+    "start": "node server.js"
   },
   "dependencies": {
-    "serve": "^14.2.4"
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
   }
 }
