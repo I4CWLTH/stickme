@@ -1,0 +1,12 @@
+{
+  "name": "stickme",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-powered stick-figure movie creator",
+  "scripts": {
+    "start": "serve -s . -l $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
