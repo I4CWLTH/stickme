@@ -1,33 +1,38 @@
-/* Stickme Production Cartoon Engine v2 */
+/* Stickme Production Cartoon Engine v3 */
 .preview-stage{position:relative;background:#162236!important;overflow:hidden!important}
 .preview-stage>.scene-bg,.preview-stage>.character{display:none!important}
 #cartoonStage{position:absolute;inset:0;width:100%;height:100%;z-index:3}
-#cartoonStage .wall-dark{fill:#143d43}
-#cartoonStage .wall-light{fill:#1f6868}
-#cartoonStage .trim{fill:#d9e5df;stroke:#17232a;stroke-width:2}
-#cartoonStage .floor{fill:#58777a}
-#cartoonStage .desk-top{fill:#8c6954;stroke:#241d1b;stroke-width:4;stroke-linejoin:round}
-#cartoonStage .desk-front{fill:#6e4f3f;stroke:#241d1b;stroke-width:4}
-#cartoonStage .chair{fill:#137b9a;stroke:#13242d;stroke-width:4}
-#cartoonStage .prop{stroke:#17232a;stroke-width:4;stroke-linejoin:round}
+#cameraLayer{transform-origin:0 0}
+#cartoonStage .trim{fill:#dbe7e3;stroke:#17232a;stroke-width:2}
+#cartoonStage .floor{fill:#5b7378}
+#cartoonStage .desk-top{fill:#936f58;stroke:#241d1b;stroke-width:4;stroke-linejoin:round}
+#cartoonStage .desk-front{fill:#715342;stroke:#241d1b;stroke-width:4}
 #cartoonStage .frame{fill:#403347;stroke:#15191d;stroke-width:5}
 #cartoonStage .frame-inner{fill:#27465f}
 #cartoonStage .door{fill:#efe5c4;stroke:#17232a;stroke-width:5}
-#cartoonStage .shadow{fill:rgba(8,14,18,.28)}
-#cartoonStage .char-head{fill:#f4f2ef;stroke:#111318;stroke-width:6}
-#cartoonStage .char-body{fill:#f4f2ef;stroke:#111318;stroke-width:6;stroke-linejoin:round}
-#cartoonStage .limb{fill:none;stroke:#111318;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
-#cartoonStage .hand{fill:#111318;stroke:#111318;stroke-width:2}
+#cartoonStage .window-frame{fill:#263240;stroke:#121821;stroke-width:6}
+#cartoonStage .window-glass{fill:#6d90ad;stroke:#17232a;stroke-width:2}
+#cartoonStage .window-bar{fill:none;stroke:#2d3e4d;stroke-width:5}
+#cartoonStage .actor-shadow,#cartoonStage .shadow{fill:rgba(8,14,18,.24)}
+#cartoonStage .char-head{fill:#fffdf8;stroke:#111318;stroke-width:6.5}
+#cartoonStage .char-body{fill:#fffdf8;stroke:#111318;stroke-width:6.5;stroke-linejoin:round}
+#cartoonStage .limb{fill:none;stroke:#111318;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+#cartoonStage .arm-line{stroke-width:7.5}
 #cartoonStage .eye{fill:#111318}
 #cartoonStage .feature{fill:none;stroke:#111318;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
 #cartoonStage .hair{fill:none;stroke:#111318;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+#cartoonStage .hat{fill:#6c3f83;stroke:#111318;stroke-width:5;stroke-linejoin:round}
 #cartoonStage .brow{fill:none;stroke:#111318;stroke-width:5;stroke-linecap:round}
-#cartoonStage .mouth-fill{fill:#111318;stroke:#111318;stroke-width:2}
-#cartoonStage .speedline{fill:none;stroke:#f4f2ef;stroke-width:4;stroke-linecap:round;opacity:.75}
-#cartoonStage .scene-label{font:700 14px Inter,sans-serif;fill:#e9f2f5;letter-spacing:.08em}
-#cartoonStage .poster-title{font:900 12px Inter,sans-serif;fill:#ffd24a;text-anchor:middle}
-#cartoonStage .poster-sub{font:700 6px Inter,sans-serif;fill:#76e2ff;text-anchor:middle}
+#cartoonStage .mouth-open{fill:#111318;stroke:#111318;stroke-width:2}
+#cartoonStage .hand-palm{fill:#fffdf8;stroke:#111318;stroke-width:5}
+#cartoonStage .hand-fill{fill:#fffdf8;stroke:#111318;stroke-width:5}
+#cartoonStage .finger{fill:none;stroke:#111318;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+#cartoonStage .motion-line{fill:none;stroke:#eef7ff;stroke-width:5;stroke-linecap:round;opacity:.9}
+#cartoonStage .poster-title{font:900 13px Inter,sans-serif;fill:#ffd24a;text-anchor:middle;letter-spacing:.08em}
+#cartoonStage .poster-sub{font:700 8px Inter,sans-serif;fill:#76e2ff;text-anchor:middle;letter-spacing:.12em}
 .preview-stage .speech,.preview-stage .watermark,.preview-stage .scene-title,.preview-stage .action-chip{z-index:9}
-.preview-stage .speech{top:5%;max-width:55%;font-size:13px}
-.preview-stage .watermark{pointer-events:none}
-@media(max-width:760px){.preview-stage .speech{font-size:10px;max-width:70%}}
+.preview-stage .speech{top:5%;max-width:57%;font-size:13px;font-weight:800;background:#fff;color:#11131a;border-radius:22px;padding:12px 18px;box-shadow:0 10px 28px rgba(0,0,0,.22)}
+.preview-stage .watermark{pointer-events:none;opacity:.18}
+.preview-stage .action-chip{background:rgba(6,20,27,.88);border:1px solid #47d7df;color:#7df5ff;border-radius:999px;font-weight:900;letter-spacing:.1em}
+.sound-toggle{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;border:1px solid #34415b;background:#111827;color:#fff;font-size:15px;cursor:pointer;flex:0 0 auto}.sound-toggle:hover{border-color:#7cf6ff;transform:translateY(-1px)}
+@media(max-width:760px){.preview-stage .speech{font-size:10px;max-width:72%;padding:9px 12px}.sound-toggle{width:34px;height:34px}}
