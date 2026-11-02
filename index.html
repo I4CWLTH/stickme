@@ -36,7 +36,7 @@
       <div class="studio-grid">
         <aside class="panel script-panel">
           <div class="panel-label">SCRIPT</div>
-          <textarea id="scriptInput" placeholder="Paste your script here...\n\nExample:\nSCENE 1 — Office kitchen\nMAYA: Who keeps stealing my lunch?\nJORDAN: Maybe your sandwich chose freedom."></textarea>
+          <textarea id="scriptInput" placeholder="Paste a script or describe a story...\n\nExample:\nSCENE 1 — Office kitchen\nMAYA: Who keeps stealing my lunch?\n\nOr:\nGuy is fishing on a boat and a fish pulls him into the water."></textarea>
           <div class="script-footer"><span id="charCount">0 characters</span><button id="generateBtn" class="primary full">Generate movie</button></div>
         </aside>
 
@@ -46,31 +46,13 @@
 
             <div class="character person-a" data-character="a" aria-hidden="true">
               <div class="shadow"></div>
-              <svg class="puppet" viewBox="0 0 180 270" role="presentation">
-                <g class="body-root">
-                  <g class="leg leg-left" transform="translate(82 176)"><path class="bone thigh" d="M0 0 Q-7 27 -13 49"/><g class="shin-group" transform="translate(-13 49)"><path class="bone shin" d="M0 0 Q-3 25 -7 45"/><path class="foot" d="M-8 45 Q5 50 20 46"/></g></g>
-                  <g class="leg leg-right" transform="translate(98 176)"><path class="bone thigh" d="M0 0 Q7 27 13 49"/><g class="shin-group" transform="translate(13 49)"><path class="bone shin" d="M0 0 Q3 25 7 45"/><path class="foot" d="M7 45 Q20 50 34 45"/></g></g>
-                  <path class="torso" d="M72 105 Q90 96 108 105 L112 166 Q91 177 68 166 Z"/>
-                  <g class="arm arm-left" transform="translate(74 113)"><path class="bone upper" d="M0 0 Q-18 18 -29 41"/><g class="forearm-group" transform="translate(-29 41)"><path class="bone forearm" d="M0 0 Q-14 15 -23 28"/><g class="hand hand-left" transform="translate(-23 28)"><circle r="5"/><path d="M-2 -1 l-8 2 M-1 1 l-7 6 M1 2 l-3 9"/></g></g></g>
-                  <g class="arm arm-right" transform="translate(106 113)"><path class="bone upper" d="M0 0 Q18 18 29 41"/><g class="forearm-group" transform="translate(29 41)"><path class="bone forearm" d="M0 0 Q14 15 23 28"/><g class="hand hand-right" transform="translate(23 28)"><circle r="5"/><path d="M2 -1 l8 2 M1 1 l7 6 M-1 2 l3 9"/></g></g></g>
-                  <g class="head-group" transform="translate(90 72)"><circle class="face" r="39"/><path class="hair" d="M-31 -23 Q-17 -43 -1 -34 Q13 -47 29 -29 Q11 -37 -2 -29 Q-19 -38 -31 -23"/><ellipse class="eye eye-left" cx="-14" cy="-4" rx="3.7" ry="6"/><ellipse class="eye eye-right" cx="14" cy="-4" rx="3.7" ry="6"/><path class="brow brow-left" d="M-23 -14 Q-14 -19 -6 -15"/><path class="brow brow-right" d="M6 -15 Q15 -19 23 -14"/><path class="mouth mouth-smile" d="M-16 14 Q0 28 16 14"/><path class="mouth mouth-frown" d="M-14 22 Q0 7 14 22"/><ellipse class="mouth mouth-open" cx="0" cy="17" rx="10" ry="8"/></g>
-                </g>
-              </svg>
+              <svg class="puppet" viewBox="0 0 180 270" role="presentation"></svg>
               <div class="name-tag">MAYA</div>
             </div>
 
             <div class="character person-b" data-character="b" aria-hidden="true">
               <div class="shadow"></div>
-              <svg class="puppet" viewBox="0 0 180 270" role="presentation">
-                <g class="body-root">
-                  <g class="leg leg-left" transform="translate(82 176)"><path class="bone thigh" d="M0 0 Q-7 27 -13 49"/><g class="shin-group" transform="translate(-13 49)"><path class="bone shin" d="M0 0 Q-3 25 -7 45"/><path class="foot" d="M-8 45 Q5 50 20 46"/></g></g>
-                  <g class="leg leg-right" transform="translate(98 176)"><path class="bone thigh" d="M0 0 Q7 27 13 49"/><g class="shin-group" transform="translate(13 49)"><path class="bone shin" d="M0 0 Q3 25 7 45"/><path class="foot" d="M7 45 Q20 50 34 45"/></g></g>
-                  <path class="torso" d="M72 105 Q90 96 108 105 L112 166 Q91 177 68 166 Z"/>
-                  <g class="arm arm-left" transform="translate(74 113)"><path class="bone upper" d="M0 0 Q-18 18 -29 41"/><g class="forearm-group" transform="translate(-29 41)"><path class="bone forearm" d="M0 0 Q-14 15 -23 28"/><g class="hand hand-left" transform="translate(-23 28)"><circle r="5"/><path d="M-2 -1 l-8 2 M-1 1 l-7 6 M1 2 l-3 9"/></g></g></g>
-                  <g class="arm arm-right" transform="translate(106 113)"><path class="bone upper" d="M0 0 Q18 18 29 41"/><g class="forearm-group" transform="translate(29 41)"><path class="bone forearm" d="M0 0 Q14 15 23 28"/><g class="hand hand-right" transform="translate(23 28)"><circle r="5"/><path d="M2 -1 l8 2 M1 1 l7 6 M-1 2 l3 9"/></g></g></g>
-                  <g class="head-group" transform="translate(90 72)"><circle class="face" r="39"/><path class="hair" d="M-33 -21 Q-15 -39 4 -34 Q21 -39 31 -23 Q14 -32 1 -27 Q-17 -34 -33 -21"/><ellipse class="eye eye-left" cx="-14" cy="-4" rx="3.7" ry="6"/><ellipse class="eye eye-right" cx="14" cy="-4" rx="3.7" ry="6"/><path class="brow brow-left" d="M-23 -14 Q-14 -19 -6 -15"/><path class="brow brow-right" d="M6 -15 Q15 -19 23 -14"/><path class="mouth mouth-smile" d="M-16 14 Q0 28 16 14"/><path class="mouth mouth-frown" d="M-14 22 Q0 7 14 22"/><ellipse class="mouth mouth-open" cx="0" cy="17" rx="10" ry="8"/></g>
-                </g>
-              </svg>
+              <svg class="puppet" viewBox="0 0 180 270" role="presentation"></svg>
               <div class="name-tag">JORDAN</div>
             </div>
 
@@ -84,9 +66,9 @@
 
         <aside class="panel director-panel">
           <div class="panel-label">AI DIRECTOR</div>
-          <div class="director-card"><span class="mini-label">MOTION ENGINE</span><strong>Articulated SVG puppets</strong><small>Head, torso, hands, upper/lower arms and legs move independently for fluid acting.</small></div>
-          <div class="director-card"><span class="mini-label">CHARACTERS</span><strong>Expressive reusable cast</strong><small>Curved limbs, real hands, hair, facial emotion, idle breathing and pose-to-pose animation.</small></div>
-          <div class="director-card"><span class="mini-label">SOUND</span><strong>Adaptive SFX + music</strong><small>Scene-aware ambience and transitions</small></div>
+          <div class="director-card"><span class="mini-label">MOTION ENGINE</span><strong>Cinematic cartoon motion</strong><small>Full-body acting, reactions, walking, falls, gestures and camera-aware staging.</small></div>
+          <div class="director-card"><span class="mini-label">CHARACTERS</span><strong>Expressive reusable cast</strong><small>Curved limbs, hands, hair, facial emotion, idle breathing and animated dialogue.</small></div>
+          <div class="director-card"><span class="mini-label">SOUND</span><strong>Adaptive dialogue + SFX</strong><small>Speech timing, scene-aware ambience and transitions.</small></div>
           <label class="toggle-row"><span>Auto camera cuts</span><input type="checkbox" checked></label>
           <label class="toggle-row"><span>Expressions</span><input type="checkbox" checked></label>
           <label class="toggle-row"><span>Speech bubbles</span><input type="checkbox" checked></label>
@@ -112,5 +94,6 @@
 
   <script src="app.js"></script>
   <script src="motion-fix.js"></script>
+  <script src="story-director-v3.js"></script>
 </body>
 </html>
