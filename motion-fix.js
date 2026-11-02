@@ -69,3 +69,21 @@ animateBeat = function(beat,index=0) {
   const target = actorFor(scene,beat,index);
   if (beat.action === 'run' || beat.action === 'walk') spatialTravel(target,beat.action);
 };
+
+// Load the production cartoon layer last so it can replace the prototype renderer.
+(function loadCartoonV2(){
+  if(!document.querySelector('link[data-stickme-cartoon-v2]')){
+    const css=document.createElement('link');
+    css.rel='stylesheet';
+    css.href='cartoon-v2.css';
+    css.dataset.stickmeCartoonV2='true';
+    document.head.appendChild(css);
+  }
+  if(!document.querySelector('script[data-stickme-cartoon-v2]')){
+    const js=document.createElement('script');
+    js.src='cartoon-v2.js';
+    js.defer=true;
+    js.dataset.stickmeCartoonV2='true';
+    document.body.appendChild(js);
+  }
+})();
