@@ -1,0 +1,46 @@
+.preview-stage{background:linear-gradient(#2b3650 0 58%,#202633 58%);}
+.character{width:130px;height:220px;filter:drop-shadow(0 10px 10px rgba(0,0,0,.18))}
+.figure{width:92px;height:180px}
+.head-wrap{left:12px;top:-4px;width:68px;height:70px}
+.head{inset:3px 0 0 0;border:4px solid #0b0d12;background:#fff;border-radius:50%}
+.hair{background:#0b0d12!important;box-shadow:none!important}
+.hair-a{width:38px;height:8px;left:5px;top:0;border-radius:80% 20% 70% 20%;transform:rotate(-8deg)}
+.hair-a:before,.hair-a:after,.hair-b:before,.hair-b:after{content:"";position:absolute;width:24px;height:4px;background:#0b0d12;border-radius:999px;transform-origin:left center}
+.hair-a:before{left:20px;top:-7px;transform:rotate(-26deg)}.hair-a:after{left:25px;top:-1px;transform:rotate(-8deg)}
+.hair-b{width:33px;height:7px;left:9px;top:1px;border-radius:80% 20% 70% 20%;transform:rotate(-4deg)}
+.hair-b:before{left:18px;top:-7px;transform:rotate(-35deg)}.hair-b:after{left:23px;top:-2px;transform:rotate(-12deg)}
+.eye{top:24px;width:7px;height:9px;background:#0b0d12}.eye-l{left:17px}.eye-r{right:17px}
+.mouth{left:50%;bottom:11px;width:24px;height:10px;border:0;border-bottom:4px solid #0b0d12;border-radius:0 0 50% 50%;transform:translateX(-50%)}
+.brow{background:#0b0d12;height:3px;width:12px;top:17px}
+.torso{top:63px;left:50%;width:44px;height:67px;background:#fff;border:4px solid #0b0d12;border-radius:22px 22px 12px 12px;transform:translateX(-50%)}
+.shirt{display:none}
+.limb,.forearm,.shin{background:#0b0d12!important;width:5px!important;border-radius:999px}
+.arm{top:72px;height:54px}.arm-l{left:25px;transform:rotate(32deg)}.arm-r{right:25px;transform:rotate(-32deg)}
+.forearm{top:46px;height:46px!important}.arm-l .forearm{transform:rotate(9deg)}.arm-r .forearm{transform:rotate(-9deg)}
+.forearm:after{content:"";position:absolute;left:-4px;bottom:-8px;width:13px;height:13px;background:#0b0d12;border-radius:50%}
+.forearm:before{content:"";position:absolute;left:-5px;bottom:-14px;width:3px;height:10px;background:#0b0d12;border-radius:999px;box-shadow:5px 0 #0b0d12,10px 0 #0b0d12;transform:rotate(7deg);transform-origin:top}
+.leg{top:124px;height:58px}.leg-l{left:34px;transform:rotate(8deg)}.leg-r{right:34px;transform:rotate(-8deg)}
+.shin{top:49px;height:51px!important}.shin:after{content:"";position:absolute;bottom:-2px;width:19px;height:6px;background:#0b0d12;border-radius:999px}.leg-l .shin:after{right:0}.leg-r .shin:after{left:0}
+.shadow{width:88px;height:13px;background:rgba(0,0,0,.18)}
+.name-tag{background:rgba(255,255,255,.92);color:#11131a;border:1px solid rgba(0,0,0,.12);font-size:9px}
+.character.speaking .mouth{height:12px;width:18px;border:3px solid #0b0d12;border-top:0;background:#fff}
+.character.speaking .figure{animation:refBob .42s ease-in-out infinite alternate}
+.character.react .head-wrap{animation:refThink .8s ease-in-out infinite alternate}
+.character.react .arm-r{transform:rotate(-118deg)}.character.react .arm-r .forearm{transform:rotate(-58deg)}
+.character.point .arm-r{transform:rotate(-92deg)}.character.point .arm-r .forearm{transform:rotate(0)}
+.character.walk{animation:refWalkTravel 2.2s ease-in-out infinite alternate}.character.walk .figure{animation:refWalkBounce .44s ease-in-out infinite alternate}
+.character.walk .leg-l{animation:refLeg .44s ease-in-out infinite alternate}.character.walk .leg-r{animation:refLeg .44s ease-in-out infinite alternate-reverse}.character.walk .arm-l{animation:refArm .44s ease-in-out infinite alternate-reverse}.character.walk .arm-r{animation:refArm .44s ease-in-out infinite alternate}
+.character.dance .figure{animation:refDance .55s ease-in-out infinite alternate}.character.dance .arm-l{animation:refDanceL .55s ease-in-out infinite alternate}.character.dance .arm-r{animation:refDanceR .55s ease-in-out infinite alternate}
+.character.angry .brow-l{transform:rotate(22deg)}.character.angry .brow-r{transform:rotate(-22deg)}.character.angry .mouth{width:20px;border-radius:50% 50% 0 0;border-top:4px solid #0b0d12;border-bottom:0;bottom:7px}
+.character.surprised .eye{width:8px;height:11px}.character.surprised .mouth{width:13px;height:13px;border:3px solid #0b0d12;border-radius:50%;bottom:7px}
+.speech{background:#fff;color:#11131a;border:1px solid rgba(0,0,0,.12);font-size:13px;border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.2)}
+@keyframes refBob{to{transform:translateX(-50%) translateY(-5px) rotate(1deg)}}
+@keyframes refThink{to{transform:rotate(8deg) translateY(-2px)}}
+@keyframes refWalkTravel{to{transform:translateX(28px)}}
+@keyframes refWalkBounce{to{transform:translateX(-50%) translateY(-7px)}}
+@keyframes refLeg{to{transform:rotate(-24deg)}}
+@keyframes refArm{to{transform:rotate(-28deg)}}
+@keyframes refDance{to{transform:translateX(-50%) translateY(-10px) rotate(7deg)}}
+@keyframes refDanceL{to{transform:rotate(135deg)}}
+@keyframes refDanceR{to{transform:rotate(-135deg)}}
+@media(max-width:760px){.character{transform:scale(.76);transform-origin:50% 100%}.person-a{left:5%}.person-b{right:5%}}
