@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#080b14" />
+  <title>Stickme — Turn scripts into stick-figure movies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">S</span><span>stickme</span></div>
+    <nav><a href="#studio">Studio</a><a href="#pricing">Pricing</a><button class="ghost">Sign in</button></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">AI STICK-FIGURE MOVIE STUDIO</div>
+      <h1>Your script.<br><span>Your movie.</span></h1>
+      <p>Paste a scene. Stickme turns it into characters, shots, motion, dialogue, timing and a shareable animated preview.</p>
+      <div class="hero-actions"><a class="primary" href="#studio">Create a movie</a><button id="loadDemo" class="secondary">Load demo script</button></div>
+      <div class="hero-meta"><span>⚡ Scene parsing</span><span>🎭 Auto-casting</span><span>🎬 AI Director</span><span>🔒 Paid clean exports</span></div>
+    </section>
+
+    <section id="studio" class="studio-shell">
+      <div class="studio-head">
+        <div><span class="status-dot"></span> STICKME CREATOR</div>
+        <div class="format-pills"><button class="format active" data-format="16:9">16:9</button><button class="format" data-format="9:16">9:16</button><button class="format" data-format="1:1">1:1</button></div>
+      </div>
+
+      <div class="studio-grid">
+        <aside class="panel script-panel">
+          <div class="panel-label">SCRIPT</div>
+          <textarea id="scriptInput" placeholder="Paste your script here...\n\nExample:\nSCENE 1 — Office kitchen\nMAYA: Who keeps stealing my lunch?\nJORDAN: Maybe your sandwich chose freedom."></textarea>
+          <div class="script-footer"><span id="charCount">0 characters</span><button id="generateBtn" class="primary full">Generate movie</button></div>
+        </aside>
+
+        <section class="panel preview-panel">
+          <div id="previewStage" class="preview-stage ratio-169">
+            <div class="scene-bg"><div class="window"></div><div class="desk"></div></div>
+            <div class="stick person-a" aria-hidden="true"><i class="head"></i><i class="body"></i><i class="arm l"></i><i class="arm r"></i><i class="leg l"></i><i class="leg r"></i></div>
+            <div class="stick person-b" aria-hidden="true"><i class="head"></i><i class="body"></i><i class="arm l"></i><i class="arm r"></i><i class="leg l"></i><i class="leg r"></i></div>
+            <div id="speech" class="speech">Paste a script and hit Generate Movie.</div>
+            <div class="watermark">STICKME SAMPLE</div>
+            <div id="sceneTitle" class="scene-title">SCENE PREVIEW</div>
+          </div>
+          <div class="playbar"><button id="playBtn" class="play">▶</button><div class="scrub"><div id="progress"></div></div><span id="timecode">00:00 / 00:00</span></div>
+        </section>
+
+        <aside class="panel director-panel">
+          <div class="panel-label">AI DIRECTOR</div>
+          <div class="director-card"><span class="mini-label">STYLE</span><strong>Cinematic Comedy</strong><small>Reaction shots, punchy pacing, visual beats</small></div>
+          <div class="director-card"><span class="mini-label">VOICE</span><strong>Auto-cast voices</strong><small>One distinct voice per character</small></div>
+          <div class="director-card"><span class="mini-label">SOUND</span><strong>Adaptive SFX + music</strong><small>Scene-aware ambience and transitions</small></div>
+          <label class="toggle-row"><span>Auto camera cuts</span><input type="checkbox" checked></label>
+          <label class="toggle-row"><span>Expressions</span><input type="checkbox" checked></label>
+          <label class="toggle-row"><span>Speech bubbles</span><input type="checkbox" checked></label>
+        </aside>
+      </div>
+
+      <div class="timeline-panel panel">
+        <div class="timeline-head"><div><span class="panel-label">TIMELINE</span><strong id="sceneCount">0 scenes</strong></div><div class="timeline-actions"><button class="ghost small">+ Scene</button><button id="exportBtn" class="primary small">Export movie</button></div></div>
+        <div id="timeline" class="timeline"><div class="timeline-empty">Your generated scenes will appear here.</div></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="eyebrow">PAY ONLY WHEN YOU WANT THE CLEAN FILE</div>
+      <h2>Preview free. Export when it’s worth it.</h2>
+      <div class="price-card"><div><span class="mini-label">SINGLE MOVIE EXPORT</span><h3>$4.99</h3><p>Clean MP4 + audio export, no watermark, commercial-ready file.</p></div><button class="primary" id="buyBtn">Unlock export</button></div>
+    </section>
+  </main>
+
+  <div id="paywall" class="modal hidden">
+    <div class="modal-card"><button id="closeModal" class="modal-close">×</button><div class="lock">🔒</div><h2>Your movie is ready to unlock.</h2><p>The free preview stays watermarked. Unlock the clean MP4 and audio file for this project.</p><div class="checkout-row"><span>Stickme movie export</span><strong>$4.99</strong></div><button id="checkoutBtn" class="primary full">Continue to secure checkout</button><small>Stripe checkout hook is ready to connect next.</small></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
