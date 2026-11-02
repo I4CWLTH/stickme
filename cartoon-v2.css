@@ -1,0 +1,33 @@
+/* Stickme Production Cartoon Engine v2 */
+.preview-stage{position:relative;background:#162236!important;overflow:hidden!important}
+.preview-stage>.scene-bg,.preview-stage>.character{display:none!important}
+#cartoonStage{position:absolute;inset:0;width:100%;height:100%;z-index:3}
+#cartoonStage .wall-dark{fill:#143d43}
+#cartoonStage .wall-light{fill:#1f6868}
+#cartoonStage .trim{fill:#d9e5df;stroke:#17232a;stroke-width:2}
+#cartoonStage .floor{fill:#58777a}
+#cartoonStage .desk-top{fill:#8c6954;stroke:#241d1b;stroke-width:4;stroke-linejoin:round}
+#cartoonStage .desk-front{fill:#6e4f3f;stroke:#241d1b;stroke-width:4}
+#cartoonStage .chair{fill:#137b9a;stroke:#13242d;stroke-width:4}
+#cartoonStage .prop{stroke:#17232a;stroke-width:4;stroke-linejoin:round}
+#cartoonStage .frame{fill:#403347;stroke:#15191d;stroke-width:5}
+#cartoonStage .frame-inner{fill:#27465f}
+#cartoonStage .door{fill:#efe5c4;stroke:#17232a;stroke-width:5}
+#cartoonStage .shadow{fill:rgba(8,14,18,.28)}
+#cartoonStage .char-head{fill:#f4f2ef;stroke:#111318;stroke-width:6}
+#cartoonStage .char-body{fill:#f4f2ef;stroke:#111318;stroke-width:6;stroke-linejoin:round}
+#cartoonStage .limb{fill:none;stroke:#111318;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+#cartoonStage .hand{fill:#111318;stroke:#111318;stroke-width:2}
+#cartoonStage .eye{fill:#111318}
+#cartoonStage .feature{fill:none;stroke:#111318;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+#cartoonStage .hair{fill:none;stroke:#111318;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+#cartoonStage .brow{fill:none;stroke:#111318;stroke-width:5;stroke-linecap:round}
+#cartoonStage .mouth-fill{fill:#111318;stroke:#111318;stroke-width:2}
+#cartoonStage .speedline{fill:none;stroke:#f4f2ef;stroke-width:4;stroke-linecap:round;opacity:.75}
+#cartoonStage .scene-label{font:700 14px Inter,sans-serif;fill:#e9f2f5;letter-spacing:.08em}
+#cartoonStage .poster-title{font:900 12px Inter,sans-serif;fill:#ffd24a;text-anchor:middle}
+#cartoonStage .poster-sub{font:700 6px Inter,sans-serif;fill:#76e2ff;text-anchor:middle}
+.preview-stage .speech,.preview-stage .watermark,.preview-stage .scene-title,.preview-stage .action-chip{z-index:9}
+.preview-stage .speech{top:5%;max-width:55%;font-size:13px}
+.preview-stage .watermark{pointer-events:none}
+@media(max-width:760px){.preview-stage .speech{font-size:10px;max-width:70%}}
