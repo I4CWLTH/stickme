@@ -1,34 +1,37 @@
 .preview-stage{background:linear-gradient(#2c3854 0 58%,#202633 58%);overflow:hidden}
-.character{position:absolute;bottom:16%;width:180px;height:270px;transition:left .65s cubic-bezier(.2,.7,.2,1),right .65s cubic-bezier(.2,.7,.2,1),transform .35s ease;filter:drop-shadow(0 12px 14px rgba(0,0,0,.2))}
-.person-a{left:12%}.person-b{right:12%}
-.puppet{width:100%;height:100%;overflow:visible}.body-root{transform-box:fill-box;transform-origin:50% 80%}
-.face,.torso{fill:#fff;stroke:#0d1016;stroke-width:6;stroke-linejoin:round}.bone,.foot,.hair,.brow,.hand path{fill:none;stroke:#0d1016;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}.hand circle{fill:#0d1016}.eye{fill:#0d1016}.mouth{fill:none;stroke:#0d1016;stroke-width:5;stroke-linecap:round}.mouth-frown,.mouth-open{display:none}.mouth-open{fill:#fff}.shadow{position:absolute;left:43px;bottom:1px;width:96px;height:15px;border-radius:50%;background:rgba(0,0,0,.22);filter:blur(1px);animation:shadowBreath 2.4s ease-in-out infinite}.name-tag{position:absolute;left:50%;bottom:2px;transform:translateX(-50%);padding:5px 9px;border-radius:8px;background:rgba(255,255,255,.94);color:#11131a;font-size:9px;font-weight:800;letter-spacing:.04em}
-.head-group,.arm,.leg,.forearm-group,.shin-group{transform-box:fill-box;transform-origin:top center}.head-group{transform-origin:50% 62%}.body-root{animation:idleBreath 2.4s ease-in-out infinite}
-.character.speaking .head-group{animation:speakingHead .5s ease-in-out infinite alternate}.character.speaking .mouth-smile{display:none}.character.speaking .mouth-open{display:block}.character.speaking .arm-right{animation:speakingHand .7s ease-in-out infinite alternate}
-.character.react .head-group{animation:thinkHead 1s ease-in-out infinite alternate}.character.react .arm-right{transform:rotate(-48deg)}.character.react .forearm-group{transform:rotate(-50deg)}
-.character.point .body-root{transform:rotate(-4deg)}.character.point .arm-right{transform:rotate(-76deg)}.character.point .arm-right .forearm-group{transform:rotate(73deg)}
-.character.angry .brow-left{transform:rotate(18deg);transform-origin:center}.character.angry .brow-right{transform:rotate(-18deg);transform-origin:center}.character.angry .mouth-smile{display:none}.character.angry .mouth-frown{display:block}.character.angry .body-root{animation:angryLean .45s ease-in-out infinite alternate}.character.angry .arm-left{transform:rotate(24deg)}
-.character.surprised .mouth-smile{display:none}.character.surprised .mouth-open{display:block}.character.surprised .eye{transform:scale(1.25);transform-box:fill-box;transform-origin:center}.character.surprised .body-root{animation:startle .42s ease-out 1}
-.character.walk{animation:travel 2.1s ease-in-out infinite alternate}.character.walk .body-root{animation:walkBounce .36s ease-in-out infinite alternate}.character.walk .leg-left{animation:legSwing .36s ease-in-out infinite alternate}.character.walk .leg-right{animation:legSwing .36s ease-in-out infinite alternate-reverse}.character.walk .arm-left{animation:armSwing .36s ease-in-out infinite alternate-reverse}.character.walk .arm-right{animation:armSwing .36s ease-in-out infinite alternate}
-.character.dance .body-root{animation:danceBody .55s ease-in-out infinite alternate}.character.dance .arm-left{animation:danceArmL .55s ease-in-out infinite alternate}.character.dance .arm-right{animation:danceArmR .55s ease-in-out infinite alternate}.character.dance .leg-left{animation:danceLeg .55s ease-in-out infinite alternate}.character.dance .leg-right{animation:danceLeg .55s ease-in-out infinite alternate-reverse}
+.character{position:absolute;bottom:12%;width:215px;height:315px;transition:left .7s cubic-bezier(.2,.7,.2,1),right .7s cubic-bezier(.2,.7,.2,1),transform .42s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 14px 16px rgba(0,0,0,.2));z-index:4}
+.person-a{left:7%}.person-b{right:7%}
+.puppet{width:100%;height:100%;overflow:visible}.body-root{transform-box:fill-box;transform-origin:50% 82%}
+.face{fill:#fff;stroke:#0c0f14;stroke-width:5.4;stroke-linejoin:round}.torso{fill:#fff;stroke:#0c0f14;stroke-width:5.4;stroke-linejoin:round;transform-box:fill-box;transform-origin:center;transform:scale(1.14,1.12)}
+.bone,.foot,.hair,.brow,.hand path{fill:none;stroke:#0c0f14;stroke-width:5.6;stroke-linecap:round;stroke-linejoin:round}.hand circle{fill:#fff;stroke:#0c0f14;stroke-width:4.6}.eye{fill:#0c0f14}.mouth{fill:none;stroke:#0c0f14;stroke-width:4.4;stroke-linecap:round}.mouth-frown,.mouth-open{display:none}.mouth-open{fill:#fff}.shadow{position:absolute;left:52px;bottom:0;width:112px;height:15px;border-radius:50%;background:rgba(0,0,0,.2);filter:blur(1px);animation:shadowBreath 2.4s ease-in-out infinite}.name-tag{position:absolute;left:50%;bottom:0;transform:translateX(-50%);padding:5px 10px;border-radius:8px;background:rgba(10,14,22,.88);color:#fff;border:1px solid rgba(255,255,255,.16);font-size:9px;font-weight:800;letter-spacing:.04em;z-index:7}
+.head-group,.arm,.leg,.forearm-group,.shin-group{transform-box:fill-box;transform-origin:top center}.head-group{transform-origin:50% 64%;transform:scale(1.08)}.body-root{animation:idleBreath 2.4s ease-in-out infinite}
+.character .hair{stroke-width:4.6}.character .brow{stroke-width:4}.character .eye{transform-box:fill-box;transform-origin:center}
+.character.speaking .head-group{animation:speakingHead .48s ease-in-out infinite alternate}.character.speaking .mouth-smile{display:none}.character.speaking .mouth-open{display:block}.character.speaking .arm-right{animation:speakingHand .68s ease-in-out infinite alternate}.character.speaking .body-root{animation:speakingBody .7s ease-in-out infinite alternate}
+.character.react .head-group{animation:thinkHead 1s ease-in-out infinite alternate}.character.react .arm-right{transform:rotate(-38deg)}.character.react .arm-right .forearm-group{transform:rotate(-64deg)}.character.react .body-root{transform:rotate(2deg)}
+.character.point .body-root{transform:translateX(7px) rotate(-7deg)}.character.point .arm-right{transform:rotate(-82deg)}.character.point .arm-right .forearm-group{transform:rotate(80deg)}.character.point .arm-left{transform:rotate(18deg)}
+.character.angry .brow-left{transform:rotate(20deg);transform-origin:center}.character.angry .brow-right{transform:rotate(-20deg);transform-origin:center}.character.angry .mouth-smile{display:none}.character.angry .mouth-frown{display:block}.character.angry .body-root{animation:angryLean .42s ease-in-out infinite alternate}.character.angry .arm-left{transform:rotate(28deg)}
+.character.surprised .mouth-smile{display:none}.character.surprised .mouth-open{display:block}.character.surprised .eye{transform:scale(1.28)}.character.surprised .body-root{animation:startle .42s ease-out 1}
+.character.walk{animation:travel 2s ease-in-out infinite alternate}.character.walk .body-root{animation:walkBounce .34s ease-in-out infinite alternate}.character.walk .leg-left{animation:legSwing .34s ease-in-out infinite alternate}.character.walk .leg-right{animation:legSwing .34s ease-in-out infinite alternate-reverse}.character.walk .arm-left{animation:armSwing .34s ease-in-out infinite alternate-reverse}.character.walk .arm-right{animation:armSwing .34s ease-in-out infinite alternate}
+.character.dance .body-root{animation:danceBody .5s ease-in-out infinite alternate}.character.dance .arm-left{animation:danceArmL .5s ease-in-out infinite alternate}.character.dance .arm-right{animation:danceArmR .5s ease-in-out infinite alternate}.character.dance .leg-left{animation:danceLeg .5s ease-in-out infinite alternate}.character.dance .leg-right{animation:danceLeg .5s ease-in-out infinite alternate-reverse}
 .character.fall .body-root{animation:fallBody 1.2s cubic-bezier(.55,.05,.75,.45) forwards}
 .character.type .body-root{transform:translateY(9px)}.character.type .arm-left{transform:rotate(-38deg)}.character.type .arm-right{transform:rotate(38deg)}.character.type .forearm-group{animation:typeTap .18s linear infinite alternate}
-.character.drink .arm-right{transform:rotate(-80deg)}.character.drink .arm-right .forearm-group{transform:rotate(-84deg)}.character.drink .head-group{transform:rotate(-7deg)}
-.speech{background:#fff;color:#11131a;border:1px solid rgba(0,0,0,.12);font-size:13px;border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.2);max-width:56%;z-index:8}.action-chip{z-index:8}.watermark{z-index:6}.scene-title{z-index:8}
-@keyframes idleBreath{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-3px) rotate(.8deg)}}
-@keyframes shadowBreath{50%{transform:scaleX(.92);opacity:.7}}
-@keyframes speakingHead{to{transform:rotate(4deg) translateY(-2px)}}
-@keyframes speakingHand{from{transform:rotate(-6deg)}to{transform:rotate(-24deg)}}
-@keyframes thinkHead{to{transform:rotate(8deg) translateY(1px)}}
-@keyframes angryLean{to{transform:translateX(6px) rotate(-4deg)}}
-@keyframes startle{0%{transform:scale(.96)}55%{transform:scale(1.06) translateY(-8px)}100%{transform:scale(1)}}
-@keyframes travel{from{transform:translateX(-16px)}to{transform:translateX(24px)}}
-@keyframes walkBounce{from{transform:translateY(0)}to{transform:translateY(-9px)}}
-@keyframes legSwing{from{transform:rotate(25deg)}to{transform:rotate(-24deg)}}
-@keyframes armSwing{from{transform:rotate(26deg)}to{transform:rotate(-28deg)}}
-@keyframes danceBody{to{transform:translateY(-11px) rotate(6deg)}}
-@keyframes danceArmL{to{transform:rotate(120deg)}}@keyframes danceArmR{to{transform:rotate(-120deg)}}@keyframes danceLeg{to{transform:rotate(18deg)}}
+.character.drink .arm-right{transform:rotate(-80deg)}.character.drink .arm-right .forearm-group{transform:rotate(-84deg)}.character.drink .head-group{transform:rotate(-7deg) scale(1.08)}
+.speech{background:#fff;color:#11131a;border:1px solid rgba(0,0,0,.12);font-size:13px;border-radius:20px;box-shadow:0 10px 28px rgba(0,0,0,.2);max-width:58%;z-index:8;font-weight:700}.action-chip{z-index:8}.watermark{z-index:6}.scene-title{z-index:8}
+@keyframes idleBreath{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(.7deg)}}
+@keyframes shadowBreath{50%{transform:scaleX(.9);opacity:.68}}
+@keyframes speakingHead{to{transform:rotate(4deg) translateY(-2px) scale(1.08)}}
+@keyframes speakingHand{from{transform:rotate(-4deg)}to{transform:rotate(-28deg)}}
+@keyframes speakingBody{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-5px) rotate(1.5deg)}}
+@keyframes thinkHead{to{transform:rotate(9deg) translateY(1px) scale(1.08)}}
+@keyframes angryLean{from{transform:translateX(0) rotate(-4deg)}to{transform:translateX(12px) rotate(-8deg)}}
+@keyframes startle{0%{transform:scale(.96)}55%{transform:scale(1.07) translateY(-10px)}100%{transform:scale(1)}}
+@keyframes travel{from{transform:translateX(-22px)}to{transform:translateX(34px)}}
+@keyframes walkBounce{from{transform:translateY(0) rotate(-1deg)}to{transform:translateY(-10px) rotate(1deg)}}
+@keyframes legSwing{from{transform:rotate(29deg)}to{transform:rotate(-27deg)}}
+@keyframes armSwing{from{transform:rotate(28deg)}to{transform:rotate(-31deg)}}
+@keyframes danceBody{to{transform:translateY(-13px) rotate(7deg)}}
+@keyframes danceArmL{to{transform:rotate(126deg)}}@keyframes danceArmR{to{transform:rotate(-126deg)}}@keyframes danceLeg{to{transform:rotate(20deg)}}
 @keyframes fallBody{0%{transform:rotate(0)}60%{transform:rotate(64deg) translate(25px,18px)}100%{transform:rotate(88deg) translate(42px,36px)}}
 @keyframes typeTap{to{transform:rotate(16deg)}}
-@media(max-width:900px){.character{width:145px;height:218px}.person-a{left:5%}.person-b{right:5%}}
-@media(max-width:760px){.character{width:118px;height:180px;bottom:18%}.speech{max-width:68%;font-size:11px}.name-tag{font-size:7px}}
+@media(max-width:900px){.character{width:165px;height:245px}.person-a{left:4%}.person-b{right:4%}}
+@media(max-width:760px){.character{width:130px;height:195px;bottom:17%}.speech{max-width:70%;font-size:11px}.name-tag{font-size:7px}}
